@@ -111,6 +111,33 @@ buttonAdd.classList.add('operation');
 buttonAdd.addEventListener('click', inputButtonClicked);
 row.appendChild(buttonAdd);
 
+// Row 5
+row = document.createElement('div');
+row.classList.add('row');
+calculator.appendChild(row);
+
+var buttonLeftParenthesis = document.createElement('button');
+buttonDecimal.textContent = '(';
+buttonDecimal.addEventListener('click', inputButtonClicked);
+row.appendChild(buttonLeftParenthesis);
+
+var buttonRightParenthesis = document.createElement('button');
+button0.textContent = ')';
+button0.addEventListener('click', inputButtonClicked);
+row.appendChild(buttonRightParenthesis);
+
+var buttonLeftBracket = document.createElement('button');
+buttonEquals.textContent = '[';
+buttonEquals.classList.add('operation');
+buttonEquals.addEventListener('click', equalsButtonClicked);
+row.appendChild(buttonLeftBracket);
+
+var buttonRightBracket = document.createElement('button');
+buttonAdd.textContent = '+';
+buttonAdd.classList.add('operation');
+buttonAdd.addEventListener('click', inputButtonClicked);
+row.appendChild(buttonRightBracket);
+
 function inputButtonClicked(event) {
     var buttonClicked = event.target;
     var buttonValue = buttonClicked.textContent;
