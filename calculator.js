@@ -116,27 +116,29 @@ row = document.createElement('div');
 row.classList.add('row');
 calculator.appendChild(row);
 
-var buttonLeftParenthesis = document.createElement('button');
-buttonDecimal.textContent = '(';
-buttonDecimal.addEventListener('click', inputButtonClicked);
-row.appendChild(buttonLeftParenthesis);
+var buttonGrouping = document.createElement('button');
+buttonGrouping.textContent = '(, )';
+buttonGrouping.classList.add('operation');
+buttonGrouping.addEventListener('click', inputButtonClicked);
+row.appendChild(buttonGrouping);
 
-var buttonRightParenthesis = document.createElement('button');
-button0.textContent = ')';
-button0.addEventListener('click', inputButtonClicked);
-row.appendChild(buttonRightParenthesis);
+var buttonMatrix = document.createElement('button');
+buttonMatrix.textContent = '[, ]';
+buttonMatrix.classList.add('operation');
+buttonMatrix.addEventListener('click', inputButtonClicked);
+row.appendChild(buttonMatrix);
 
-var buttonLeftBracket = document.createElement('button');
-buttonEquals.textContent = '[';
-buttonEquals.classList.add('operation');
-buttonEquals.addEventListener('click', equalsButtonClicked);
-row.appendChild(buttonLeftBracket);
+var buttonFactorial = document.createElement('button');
+buttonFactorial.textContent = '!';
+buttonFactorial.classList.add('operation');
+buttonFactorial.addEventListener('click', inputButtonClicked);
+row.appendChild(buttonFactorial);
 
-var buttonRightBracket = document.createElement('button');
-buttonAdd.textContent = '+';
-buttonAdd.classList.add('operation');
-buttonAdd.addEventListener('click', inputButtonClicked);
-row.appendChild(buttonRightBracket);
+var buttonPower = document.createElement('button');
+buttonPower.textContent = '^';
+buttonPower.classList.add('operation');
+buttonPower.addEventListener('click', inputButtonClicked);
+row.appendChild(buttonPower);
 
 function inputButtonClicked(event) {
     var buttonClicked = event.target;
